@@ -14,6 +14,7 @@ function SearchBar({ placeholder }) {
   };
 
   const handleSelectOption = (event, newValue) => {
+    console.log(newValue);
     setSelOption(newValue);
   };
 
@@ -24,11 +25,11 @@ function SearchBar({ placeholder }) {
       inputValue={dispValue}
       onInputChange={handleDispValue}
       freeSolo
-      options={["a", "b", "c"]}
+      options={["a", "b", "c", "d"]}
       renderInput={(params) => {
         return (
-          <Stack direction="row">
-            <TextField {...params} size="small" InputProps={{ placeholder }} />
+          <Stack direction="row" width="500px">
+            <TextField {...params} size="small" placeholder={placeholder} />
             <Button variant="contained">
               <img src={SearchIcon} alt="search-icon" />
             </Button>
