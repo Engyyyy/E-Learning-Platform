@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import SearchIcon from "../assets/search-icon.svg";
 
-function SearchBar() {
+function SearchBar({ placeholder }) {
   const [selOption, setSelOption] = useState("");
   const [dispValue, setDispValue] = useState("");
 
@@ -28,7 +28,7 @@ function SearchBar() {
       renderInput={(params) => {
         return (
           <Stack direction="row">
-            <TextField {...params} />
+            <TextField {...params} size="small" InputProps={{ placeholder }} />
             <Button variant="contained">
               <img src={SearchIcon} alt="search-icon" />
             </Button>
