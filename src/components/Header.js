@@ -5,11 +5,18 @@ import SearchBar from "./SearchBar";
 
 function Header() {
   return (
-    <Stack direction="row" justifyContent={"space-between"} alignItems="center">
+    <Stack
+      direction="row"
+      justifyContent={"space-between"}
+      alignItems="center"
+      width="100%"
+      sx={{ backgroundColor: "white" }}
+      padding="20px 10px 20px 10px"
+    >
       <img
         src={logo}
         alt="logo"
-        style={{ marginLeft: "75px", marginRight: "75px" }}
+        style={{ marginLeft: "65px", marginRight: "75px" }}
       />
       <Stack
         direction="row"

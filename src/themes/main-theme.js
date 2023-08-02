@@ -2,6 +2,10 @@ import { createTheme } from "@mui/material/styles";
 
 export const mainTheme = createTheme({
   palette: {
+    background: {
+      default: "#d4d4cf",
+      white: "ffffff",
+    },
     primary: {
       main: "#28A19C",
     },
@@ -33,6 +37,18 @@ export const mainTheme = createTheme({
     body2: {
       fontSize: "11px",
       fontWeight: 500,
+    },
+    footerTitle: {
+      color: "#28A19C",
+      fontSize: "20px",
+      fontWeight: 600,
+      fontFamily: "Quicksand",
+    },
+    footerItem: {
+      color: "#343434",
+      fontSize: "20px",
+      fontWeight: 600,
+      fontFamily: "Quicksand",
     },
     button: {
       textTransform: "none",

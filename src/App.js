@@ -1,11 +1,16 @@
 import { useTheme } from "@emotion/react";
-import SearchBar from "./components/SearchBar";
+import { Box } from "@mui/material";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 function App() {
   console.log(useTheme());
+
   return (
-    <div>
-      <SearchBar />
-    </div>
+    <Box>
+      <Header />
+      <Footer />
+    </Box>
   );
 }
 
