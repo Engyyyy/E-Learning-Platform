@@ -28,7 +28,7 @@ function SearchBar({ placeholder }) {
       options={["a", "b", "c", "d"]}
       renderInput={(params) => {
         return (
-          <Stack direction="row" width="500px">
+          <Stack direction="row" width="550px">
             <TextField {...params} size="small" placeholder={placeholder} />
             <Button variant="contained">
               <img src={SearchIcon} alt="search-icon" />
