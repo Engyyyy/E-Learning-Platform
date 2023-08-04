@@ -17,6 +17,7 @@ function LoginPage({ isOpen, closeLogin }) {
   useEffect(() => {
     if (result.data) {
       dispatch(login());
+      closeLogin();
     }
   });
 

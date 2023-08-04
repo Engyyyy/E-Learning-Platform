@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   console.log(useTheme());
-  const [isLoginOpen, setIsLoginOpen] = useState(true);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const openLoginPage = () => setIsLoginOpen(true);
   const closeLoginPage = () => setIsLoginOpen(false);
   return (
