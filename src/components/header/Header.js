@@ -1,20 +1,21 @@
-import { useContext } from "react";
 import { Button, Stack, IconButton } from "@mui/material";
-import UserContext from "../contexts/UserContext";
-import logo from "../assets/logo.svg";
-import ShoppingCartIcon from "../assets/shopping-cart-icon.svg";
-import NotificationsIcon from "../assets/notifications-icon.svg";
-import AvatarIcon from "../assets/avatar.svg";
+import { useSelector } from "react-redux";
+import logo from "../../assets/logo.svg";
+import ShoppingCartIcon from "../../assets/header/shopping-cart-icon.svg";
+import NotificationsIcon from "../../assets/header/notifications-icon.svg";
+import AvatarIcon from "../../assets/header/avatar.svg";
 import SearchBar from "./SearchBar";
 
-function Header() {
-  const { isLoggedIn } = useContext(UserContext);
+function Header({ openLogin }) {
+  const isLoggedIn = useSelector((state) => state.isLoggedIn);
   const loggedOutHeader = (
     <>
       <IconButton>
         <img src={ShoppingCartIcon} alt="shopping-cart-icon" />
       </IconButton>
-      <Button variant="text">Login</Button>
+      <Button variant="text" onClick={openLogin}>
+        Login
+      </Button>
       <Button variant="contained">Sign Up</Button>
     </>
   );

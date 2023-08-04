@@ -3,7 +3,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import SearchIcon from "../assets/search-icon.svg";
+import SearchIcon from "../../assets/header/search-icon.svg";
 
 function SearchBar({ placeholder }) {
   const [selOption, setSelOption] = useState("");

@@ -1,12 +1,11 @@
-import { createPortal } from "react-dom";
 import { Box, Stack, Typography, Container } from "@mui/material";
 import FooterLink from "./FooterLink";
-import logo from "../assets/logo.svg";
-import FacebookIcon from "../assets/facebook-icon.svg";
-import LinkedinIcon from "../assets/linkedin-icon.svg";
-import TwitterIcon from "../assets/twitter-icon.svg";
-import WhatsappIcon from "../assets/whatsapp-icon.svg";
-import YoutubeIcon from "../assets/youtube-icon.svg";
+import logo from "../../assets/logo.svg";
+import FacebookIcon from "../../assets/footer/facebook-icon.svg";
+import LinkedinIcon from "../../assets/footer/linkedin-icon.svg";
+import TwitterIcon from "../../assets/footer/twitter-icon.svg";
+import WhatsappIcon from "../../assets/footer/whatsapp-icon.svg";
+import YoutubeIcon from "../../assets/footer/youtube-icon.svg";
 
 function Footer() {
   let icons = [
@@ -44,8 +43,8 @@ function Footer() {
     <FooterLink key={index}>{item}</FooterLink>
   ));
 
-  return createPortal(
-    <Stack position="absolute" width="100%" bottom={0}>
+  return (
+    <Stack width="100%" bottom={0}>
       <Stack
         width="100%"
         direction="row"
@@ -105,8 +104,7 @@ function Footer() {
           Designed and developed at inova LLC
         </Typography>
       </Container>
-    </Stack>,
-    document.getElementById("footer-div")
+    </Stack>
   );
 }
 

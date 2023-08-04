@@ -1,5 +1,10 @@
-import { Stack, Button, Typography, DialogActions } from "@mui/material";
-import RefreshSharpIcon from "@mui/icons-material/RefreshSharp";
+import {
+  Stack,
+  Button,
+  Typography,
+  DialogActions,
+  CircularProgress,
+} from "@mui/material";
 
 function LoginActions({ handleLogin, loginResult }) {
   return (
@@ -16,19 +21,7 @@ function LoginActions({ handleLogin, loginResult }) {
           onClick={handleLogin}
         >
           {loginResult.isLoading ? (
-            <RefreshSharpIcon
-              sx={{
-                animation: "spin 2s linear infinite",
-                "@keyframes spin": {
-                  "0%": {
-                    transform: "rotate(0deg)",
-                  },
-                  "100%": {
-                    transform: "rotate(360deg)",
-                  },
-                },
-              }}
-            />
+            <CircularProgress color="neutral" />
           ) : (
             "Login"
           )}

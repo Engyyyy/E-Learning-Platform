@@ -8,7 +8,7 @@ import {
   InputAdornment,
 } from "@mui/material";
 import { useState } from "react";
-import EyeIcon from "../assets/eye-icon.svg";
+import EyeIcon from "../../assets/login/eye-icon.svg";
 
 function LoginContent({ email, setEmail, password, setPassword }) {
   const [showPassword, setShowPassword] = useState(false);

@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../store";
 import { useLoginUserMutation } from "../store";
-import LoginContent from "../components/LoginContent";
-import LoginActions from "../components/LoginActions";
-import closeIcon from "../assets/close-icon.svg";
+import LoginContent from "../components/login/LoginContent";
+import LoginActions from "../components/login/LoginActions";
+import closeIcon from "../assets/login/close-icon.svg";
 
 function LoginPage({ isOpen, closeLogin }) {
   const [email, setEmail] = useState("");

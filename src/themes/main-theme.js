@@ -12,6 +12,9 @@ export const mainTheme = createTheme({
     secondary: {
       main: "#FFBA00",
     },
+    neutral: {
+      main: "ffffff",
+    },
   },
   typography: {
     h1: {
