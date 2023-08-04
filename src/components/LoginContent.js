@@ -7,9 +7,14 @@ import {
   IconButton,
   InputAdornment,
 } from "@mui/material";
+import { useState } from "react";
 import EyeIcon from "../assets/eye-icon.svg";
 
 function LoginContent({ email, setEmail, password, setPassword }) {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const toggleShowPassword = () => setShowPassword(!showPassword);
+
   return (
     <DialogContent>
       <Stack spacing="10px">
@@ -26,21 +31,26 @@ function LoginContent({ email, setEmail, password, setPassword }) {
           Password
         </FormLabel>
         <OutlinedInput
+          type={showPassword ? "text" : "password"}
           value={password}
           onChange={(event) => setPassword(event.target.value)}
-          style={{ width: "430px", fontSize: "18px", fontWeight: 400 }}
+          style={{
+            width: "430px",
+            fontSize: "18px",
+            fontWeight: 400,
+          }}
           placeholder="Enter your password"
           endAdornment={
             <InputAdornment position="end">
-              <IconButton>
+              <IconButton onClick={toggleShowPassword}>
                 <img src={EyeIcon} alt="eye-icon" />
               </IconButton>
             </InputAdornment>
           }
         />
         <Typography
-          fontSize="14x"
-          fontWeight={600}
+          fontSize="14px"
+          fontWeight={500}
           color="#2A313B"
           fontFamily="Montserrat"
           textAlign="end"
