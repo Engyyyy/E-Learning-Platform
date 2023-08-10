@@ -1,8 +1,8 @@
 import { useTheme } from "@emotion/react";
 import { Box } from "@mui/material";
 import { useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 

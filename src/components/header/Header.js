@@ -16,7 +16,9 @@ function Header({ openLogin }) {
       <Button variant="text" onClick={openLogin}>
         Login
       </Button>
-      <Button variant="contained">Sign Up</Button>
+      <Button style={{ whiteSpace: "nowrap" }} variant="contained">
+        Sign Up
+      </Button>
     </>
   );
   const loggedInHeader = (
@@ -44,7 +46,7 @@ function Header({ openLogin }) {
       alignItems="center"
       width="100%"
       sx={{ backgroundColor: "white" }}
-      padding="20px 10px 20px 10px"
+      padding="20px 7px 20px 7px"
     >
       <img
         src={logo}
