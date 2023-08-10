@@ -1,29 +1,47 @@
-import { Typography, Button, Box } from "@mui/material";
-import Pattern from "../assets/Pattern.jpg";
+import { Typography, Button, Box, Stack } from "@mui/material";
 import CustomCard from "./CustomCard";
 import Review from "./Review";
 
-function CourseCard() {
+function CourseCard({
+  imageUrl,
+  title,
+  description,
+  priceBeforeDiscount,
+  priceAfterDiscount,
+  currency,
+  rate,
+  reviewsNumber,
+}) {
   let content = (
-    <Box style={{ display: "block", width: "272px" }}>
-      <Typography marginBottom="15px" variant="h4">
-        Digital Marketing
-      </Typography>
-
-      <Review rate={4.7} votes={1988} />
-
+    <Stack
+      spacing="15px"
+      style={{ display: "block", width: "272px", padding: "5px 0px 5px 0px" }}
+    >
       <Typography
-        marginTop="10px"
-        marginBottom="10px"
-        variant="body1"
+        variant="h4"
         textOverflow="ellipsis"
         noWrap
         width="225px"
         overflow="hidden"
         display="block"
       >
-        Melvin Owens, Roberts Andrei, Jose Partila, bla bla bla
+        {title}
       </Typography>
+
+      <Stack spacing="10px">
+        <Review rate={rate} votes={reviewsNumber} />
+
+        <Typography
+          variant="body1"
+          textOverflow="ellipsis"
+          noWrap
+          width="225px"
+          overflow="hidden"
+          display="block"
+        >
+          {description}
+        </Typography>
+      </Stack>
 
       <Typography
         variant="body2"
@@ -44,7 +62,49 @@ function CourseCard() {
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </Typography>
-    </Box>
+      {priceBeforeDiscount && currency && (
+        <Stack direction="row" spacing="10px" alignItems="center">
+          <Box>
+            <Typography
+              color="#343434"
+              fontSize="16px"
+              fontWeight={700}
+              component="span"
+            >
+              {currency + " "}
+            </Typography>
+            <Typography
+              color="#343434"
+              fontSize="16px"
+              fontWeight={700}
+              component="span"
+            >
+              {priceAfterDiscount}
+            </Typography>
+          </Box>
+          {priceAfterDiscount < priceBeforeDiscount && (
+            <Box sx={{ textDecoration: "line-through" }}>
+              <Typography
+                color="#343434"
+                fontSize="16px"
+                fontWeight={500}
+                component="span"
+              >
+                {currency + " "}
+              </Typography>
+              <Typography
+                color="#343434"
+                fontSize="16px"
+                fontWeight={500}
+                component="span"
+              >
+                {priceBeforeDiscount}
+              </Typography>
+            </Box>
+          )}
+        </Stack>
+      )}
+    </Stack>
   );
   let actions = (
     <Button sx={{ width: 1 }} variant="outlined">
@@ -52,7 +112,7 @@ function CourseCard() {
     </Button>
   );
 
-  return <CustomCard media={Pattern} content={content} actions={actions} />;
+  return <CustomCard media={imageUrl} content={content} actions={actions} />;
 }
 
 export default CourseCard;

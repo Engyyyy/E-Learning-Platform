@@ -9,16 +9,29 @@ function CustomCard({ media, content, actions }) {
     <Card
       sx={{
         width: "272px",
+        height: "460px",
         borderRadius: "15px",
         boxShadow: "1px 2px 15px rgba(0, 0, 0, 0.16)",
+        position: "relative",
       }}
     >
       <CardMedia>
-        <img src={media} alt="card-media" />
+        {media && (
+          <img height="170px" width="272px" src={media} alt="card-media" />
+        )}
       </CardMedia>
-      <Box padding="4px 10px 15px">
+      <Box sx={{ padding: "0px 10px 5px 10px" }}>
         <CardContent>{content}</CardContent>
-        <CardActions>{actions}</CardActions>
+        <CardActions
+          sx={{
+            position: "absolute",
+            bottom: "10px",
+            width: "92%",
+            textAlign: "center",
+          }}
+        >
+          {actions}
+        </CardActions>
       </Box>
     </Card>
   );
