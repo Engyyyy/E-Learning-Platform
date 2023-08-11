@@ -15,12 +15,12 @@ function CustomCard({ media, content, actions }) {
         position: "relative",
       }}
     >
-      <CardMedia>
-        {media && (
+      {media && (
+        <CardMedia>
           <img height="170px" width="272px" src={media} alt="card-media" />
-        )}
-      </CardMedia>
-      <Box sx={{ padding: "0px 10px 5px 10px" }}>
+        </CardMedia>
+      )}
+      <Box sx={{ padding: "0px 5px 5px 5px" }}>
         <CardContent>{content}</CardContent>
         <CardActions
           sx={{

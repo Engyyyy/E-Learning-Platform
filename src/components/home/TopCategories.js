@@ -60,12 +60,19 @@ function TopCategories() {
             tabs={subjectsResult.data.data.subjects}
           />
         )}
-        <Stack direction="row" justifyContent="space-evenly">
+        <Stack direction="row" spacing="30px">
           {topCategoryCourses}
         </Stack>
       </Stack>
       <Stack alignItems="center">
-        <Button variant="contained" sx={{ width: "314px" }}>
+        <Button
+          variant="contained"
+          sx={{
+            width: "314px",
+            height: "52px",
+            fontSize: "20px",
+          }}
+        >
           View More Courses
         </Button>
       </Stack>

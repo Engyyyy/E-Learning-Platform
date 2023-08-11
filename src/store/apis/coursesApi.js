@@ -28,9 +28,24 @@ const coursesApi = createApi({
           };
         },
       }),
+      getCourses: builder.query({
+        query: () => {
+          return {
+            url: "api/v1/courses",
+            method: "GET",
+            params: {
+              school_class_id: 1,
+            },
+          };
+        },
+      }),
     };
   },
 });
 
 export { coursesApi };
-export const { useGetSubjectsQuery, useGetSubjectCoursesMutation } = coursesApi;
+export const {
+  useGetSubjectsQuery,
+  useGetSubjectCoursesMutation,
+  useGetCoursesQuery,
+} = coursesApi;
