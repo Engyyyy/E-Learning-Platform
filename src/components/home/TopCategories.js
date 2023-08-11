@@ -70,21 +70,18 @@ function TopCategories() {
         </Stack>
       </Stack>
       <Stack alignItems="center">
-        <Button
-          variant="contained"
-          sx={{
-            width: "314px",
-            height: "52px",
-            fontSize: "20px",
-          }}
-        >
-          <Link
-            style={{ textDecoration: "none", color: "white" }}
-            to={`more-courses/${selected.id}/${selected.name}`}
+        <Link to={`more-courses/${selected.id}/${selected.name}`}>
+          <Button
+            variant="contained"
+            sx={{
+              width: "314px",
+              height: "52px",
+              fontSize: "20px",
+            }}
           >
             View More Courses
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </Stack>
     </Stack>
   );
