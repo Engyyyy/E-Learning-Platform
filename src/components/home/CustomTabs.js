@@ -2,7 +2,7 @@ import { Tabs, Tab, Typography, Stack } from "@mui/material";
 import SliderLeftIcon from "../../assets/home/slider-left-icon.svg";
 import SliderRightIcon from "../../assets/home/slider-right-icon.svg";
 
-function CustomTabs({ value, onChange, tabs }) {
+function CustomTabs({ value, onChange, tabs, tabWidth }) {
   const handleSelect = (event, newValue) => {
     onChange(newValue);
   };
@@ -21,6 +21,9 @@ function CustomTabs({ value, onChange, tabs }) {
         sx={{
           ".Mui-selected": {
             backgroundColor: "white",
+          },
+          ".MuiTabs-scrollButtons.Mui-disabled": {
+            opacity: 0.3,
           },
         }}
         slots={{ EndScrollButtonIcon, StartScrollButtonIcon }}
@@ -44,7 +47,7 @@ function CustomTabs({ value, onChange, tabs }) {
                 <Typography
                   overflow="hidden"
                   noWrap
-                  width="100px"
+                  width={tabWidth}
                   textOverflow="ellipsis"
                   display="block"
                   fontWeight={600}

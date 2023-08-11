@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useGetSubjectsQuery, useGetSubjectCoursesMutation } from "../../store";
-import { Button, Container, Stack } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import HomeSection from "./HomeSection";
 import Dropdowns from "./Dropdowns";
 import CustomTabs from "./CustomTabs";
@@ -58,6 +58,7 @@ function TopCategories() {
             value={selected}
             onChange={handleSelect}
             tabs={subjectsResult.data.data.subjects}
+            tabWidth="100px"
           />
         )}
         <Stack direction="row" spacing="30px">

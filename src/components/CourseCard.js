@@ -12,6 +12,10 @@ function CourseCard({
   rate,
   reviewsNumber,
 }) {
+  let media = imageUrl && (
+    <img height="170px" width="272px" src={imageUrl} alt="course-media" />
+  );
+
   let content = (
     <Stack
       spacing="15px"
@@ -112,7 +116,14 @@ function CourseCard({
     </Button>
   );
 
-  return <CustomCard media={imageUrl} content={content} actions={actions} />;
+  return (
+    <CustomCard
+      media={media}
+      content={content}
+      actions={actions}
+      cardHeight="460px"
+    />
+  );
 }
 
 export default CourseCard;
