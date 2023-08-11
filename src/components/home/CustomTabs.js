@@ -4,7 +4,16 @@ import SliderRightIcon from "../../assets/home/slider-right-icon.svg";
 
 function CustomTabs({ value, onChange, tabs, tabWidth }) {
   const handleSelect = (event, newValue) => {
-    onChange(newValue);
+    const getSelectedName = () => {
+      let selectedName;
+      tabs.forEach((tab) => {
+        if (tab.id === newValue) {
+          selectedName = tab.name;
+        }
+      });
+      return selectedName;
+    };
+    onChange(newValue, getSelectedName());
   };
 
   const EndScrollButtonIcon = () => (

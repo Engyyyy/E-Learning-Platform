@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useGetSubjectsQuery, useGetSubjectCoursesMutation } from "../../store";
 import { Button, Stack } from "@mui/material";
 import HomeSection from "./HomeSection";
@@ -7,13 +8,13 @@ import CustomTabs from "./CustomTabs";
 import CourseCard from "../CourseCard";
 
 function TopCategories() {
-  const [selected, setSelected] = useState(11);
+  const [selected, setSelected] = useState({ id: 11, name: "" });
   const subjectsResult = useGetSubjectsQuery();
   const [getSubjectCourses, subCoursesResult] = useGetSubjectCoursesMutation();
 
   const handleSelect = useCallback(
-    (tabId) => {
-      setSelected(tabId);
+    (tabId, tabName) => {
+      setSelected({ id: tabId, name: tabName });
       getSubjectCourses({ subject_id: tabId, pageNum: 1, pageSize: 4 });
     },
     [getSubjectCourses]
@@ -21,7 +22,10 @@ function TopCategories() {
 
   useEffect(() => {
     if (subjectsResult.data) {
-      handleSelect(subjectsResult.data.data.subjects[0].id);
+      handleSelect(
+        subjectsResult.data.data.subjects[0].id,
+        subjectsResult.data.data.subjects[0].name
+      );
     }
   }, [subjectsResult.data, handleSelect]);
 
@@ -55,7 +59,7 @@ function TopCategories() {
         <Dropdowns />
         {subjectsResult.data && (
           <CustomTabs
-            value={selected}
+            value={selected.id}
             onChange={handleSelect}
             tabs={subjectsResult.data.data.subjects}
             tabWidth="100px"
@@ -74,7 +78,12 @@ function TopCategories() {
             fontSize: "20px",
           }}
         >
-          View More Courses
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to={`more-courses/${selected.id}/${selected.name}`}
+          >
+            View More Courses
+          </Link>
         </Button>
       </Stack>
     </Stack>

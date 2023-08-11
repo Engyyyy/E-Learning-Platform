@@ -61,7 +61,7 @@ function PopularCertificates() {
     },
   ];
 
-  let renderedCards = cards.map((card) => {
+  let renderedCards = cards.map((card, index) => {
     let media = (
       <Stack
         alignItems="center"
@@ -89,6 +89,7 @@ function PopularCertificates() {
 
     return (
       <CustomCard
+        key={index}
         media={media}
         content={content}
         actions={actions}
