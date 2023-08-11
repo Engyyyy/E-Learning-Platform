@@ -6,11 +6,23 @@ import BenefitsOfLearning from "../components/home/BenefitsOfLearning";
 import MostPopular from "../components/home/MostPopular";
 import OurClients from "../components/home/OurClients";
 import PopularCertificates from "../components/home/PopularCertificates";
+import WhatsappIcon from "../assets/home/green-whatsapp-icon.svg";
+
 function HomePage() {
   return (
     <Stack spacing="100px">
       <Banner />
-      <LearningProcess />
+      <Stack>
+        <Stack direction="row" justifyContent="end" paddingRight="40px">
+          <img
+            src={WhatsappIcon}
+            alt="whatsapp-icon"
+            height="56px"
+            width="56px"
+          />
+        </Stack>
+        <LearningProcess />
+      </Stack>
       <TopCategories />
       <BenefitsOfLearning />
       <MostPopular />

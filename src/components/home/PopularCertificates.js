@@ -76,7 +76,7 @@ function PopularCertificates() {
     );
 
     let content = (
-      <Typography fontSize="19px" fontWeight={600} color="#000000">
+      <Typography noWrap fontSize="17px" fontWeight={600} color="#000000">
         {card.content}
       </Typography>
     );
