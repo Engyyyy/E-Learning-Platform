@@ -19,6 +19,7 @@ function MostPopular() {
       return (
         <CourseCard
           key={course.classified_product.course_id}
+          id={course.classified_product.course_id}
           imageUrl={course.classified_product.image_url}
           title={course.classified_product.title}
           description={course.classified_product.description}

@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import MoreCoursesPage from "./pages/MoreCoursesPage";
+import CourseDetailsPage from "./pages/CourseDetailsPage";
 
 function App() {
   console.log(useTheme());
@@ -19,6 +20,10 @@ function App() {
     {
       path: "more-courses/:subject_id/:subject_name",
       element: <MoreCoursesPage />,
+    },
+    {
+      path: "course-details/:course_id",
+      element: <CourseDetailsPage />,
     },
   ]);
 

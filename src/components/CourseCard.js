@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import { Typography, Button, Box, Stack } from "@mui/material";
 import CustomCard from "./CustomCard";
 import Review from "./Review";
 
 function CourseCard({
+  id,
   imageUrl,
   title,
   description,
@@ -21,16 +23,21 @@ function CourseCard({
       spacing="15px"
       style={{ display: "block", width: "272px", padding: "5px 0px 5px 0px" }}
     >
-      <Typography
-        variant="h4"
-        textOverflow="ellipsis"
-        noWrap
-        width="225px"
-        overflow="hidden"
-        display="block"
+      <Link
+        style={{ textDecoration: "none", color: "#343434" }}
+        to={`course-details/${id}`}
       >
-        {title}
-      </Typography>
+        <Typography
+          variant="h4"
+          textOverflow="ellipsis"
+          noWrap
+          width="225px"
+          overflow="hidden"
+          display="block"
+        >
+          {title}
+        </Typography>
+      </Link>
 
       <Stack spacing="10px">
         <Review rate={rate} votes={reviewsNumber} />

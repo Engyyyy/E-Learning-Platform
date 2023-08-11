@@ -15,6 +15,7 @@ const coursesApi = createApi({
           };
         },
       }),
+
       getSubjectCourses: builder.mutation({
         query: ({ subject_id, pageNum, pageSize }) => {
           return {
@@ -28,6 +29,7 @@ const coursesApi = createApi({
           };
         },
       }),
+
       getCourses: builder.query({
         query: () => {
           return {
