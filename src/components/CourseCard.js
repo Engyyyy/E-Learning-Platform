@@ -25,7 +25,7 @@ function CourseCard({
     >
       <Link
         style={{ textDecoration: "none", color: "#343434" }}
-        to={`course-details/${id}`}
+        to={`/course-details/${id}`}
       >
         <Typography
           variant="h4"
@@ -40,7 +40,14 @@ function CourseCard({
       </Link>
 
       <Stack spacing="10px">
-        <Review rate={rate} votes={reviewsNumber} />
+        <Review
+          rate={rate}
+          votes={reviewsNumber}
+          rateColor="#F7B52E"
+          rateFontSize="14px"
+          votesColor="#938F8C"
+          votesFontSize="11px"
+        />
 
         <Typography
           variant="body1"

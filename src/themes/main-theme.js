@@ -4,7 +4,8 @@ export const mainTheme = createTheme({
   palette: {
     background: {
       default: "#f0efed",
-      white: "ffffff",
+      white: "#ffffff",
+      primary: "#28A19C",
     },
     primary: {
       main: "#28A19C",
@@ -13,7 +14,7 @@ export const mainTheme = createTheme({
       main: "#FFBA00",
     },
     neutral: {
-      main: "ffffff",
+      main: "#ffffff",
     },
   },
   typography: {
