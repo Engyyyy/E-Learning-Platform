@@ -5,7 +5,7 @@ import { Button, Stack } from "@mui/material";
 import HomeSection from "./HomeSection";
 import Dropdowns from "./Dropdowns";
 import CustomTabs from "./CustomTabs";
-import CourseCard from "../CourseCard";
+import CourseCard from "./CourseCard";
 
 function TopCategories() {
   const [selected, setSelected] = useState({ id: 11, name: "" });

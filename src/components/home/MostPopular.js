@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IconButton, Stack } from "@mui/material";
 import { useGetCoursesQuery } from "../../store";
 import HomeSection from "./HomeSection";
-import CourseCard from "../CourseCard";
+import CourseCard from "./CourseCard";
 import SliderLeft from "../../assets/home/slider-left-icon.svg";
 import SliderRight from "../../assets/home/slider-right-icon.svg";
 

@@ -4,7 +4,7 @@ import HomeSection from "./HomeSection";
 import IbmIcon from "../../assets/home/ibm.svg";
 import GoogleIcon from "../../assets/home/colored-google-icon.svg";
 import GoogleCloudIcon from "../../assets/home/google-cloud-icon.svg";
-import CustomCard from "../CustomCard";
+import CustomCard from "./CustomCard";
 
 function PopularCertificates() {
   let title = "Popular Certificates";

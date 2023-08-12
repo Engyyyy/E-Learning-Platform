@@ -1,14 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import {
-  IconButton,
-  Pagination,
-  PaginationItem,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Pagination, PaginationItem, Stack, Typography } from "@mui/material";
 import { useGetSubjectCoursesMutation } from "../store";
-import CourseCard from "../components/CourseCard";
+import CourseCard from "../components/home/CourseCard";
 import SliderLeft from "../assets/home/slider-left-icon.svg";
 import SliderRight from "../assets/home/slider-right-icon.svg";
 
