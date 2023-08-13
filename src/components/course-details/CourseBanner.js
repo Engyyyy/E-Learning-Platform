@@ -7,14 +7,28 @@ function CourseBanner({ course }) {
   let renederedInstructors = course.classified_product.instructors.map(
     (instructor) => {
       return (
-        <Stack direction="row" spacing="5px" key={instructor.instructor_id}>
-          {instructor.profile_picture_url && (
-            <Avatar
-              src={instructor.profile_picture_url}
-              alt="instructor-profile-avatar"
-            />
-          )}
-          <Typography fontSize="16px" fontWeight={600} color="white">
+        <Stack
+          direction="row"
+          alignItems="center"
+          spacing="8px"
+          paddingBottom="10px"
+          paddingRight="40px"
+          key={instructor.instructor_id}
+        >
+          <Avatar
+            sx={{ width: "32px", height: "32px" }}
+            src={instructor.profile_picture_url}
+            alt="instructor-profile-avatar"
+          />
+          <Typography
+            width="300px"
+            noWrap
+            textOverflow="ellipsis"
+            overflow="hidden"
+            fontSize="16px"
+            fontWeight={600}
+            color="white"
+          >
             {instructor.name}
           </Typography>
         </Stack>
@@ -28,17 +42,6 @@ function CourseBanner({ course }) {
         padding: "30px 40px",
       }}
     >
-      <Stack direction="row" spacing="20px" paddingBottom="30px">
-        <Typography fontSize="17px" fontWeight={700} color="white">
-          {course.classified_product.subject}
-        </Typography>
-        <Typography fontSize="17px" fontWeight={700} color="white">
-          {">"}
-        </Typography>
-        <Typography fontSize="17px" fontWeight={700} color="white">
-          {course.classified_product.title}
-        </Typography>
-      </Stack>
       <Stack spacing="15px">
         <Typography color="white" component="span" variant="h2">
           {course.classified_product.title}
@@ -74,7 +77,7 @@ function CourseBanner({ course }) {
           </Stack>
         </Stack>
       </Stack>
-      <Stack direction="row" paddingTop="20px">
+      <Stack flexWrap="wrap" direction="row" paddingTop="20px">
         {renederedInstructors}
       </Stack>
     </Stack>
