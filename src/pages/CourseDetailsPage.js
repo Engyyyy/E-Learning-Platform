@@ -8,6 +8,7 @@ import Requirements from "../components/course-details/Requirements";
 import WhatYouLearn from "../components/course-details/WhatYouLearn";
 import ContentSection from "../components/course-details/ContentSection";
 import Instructors from "../components/course-details/Instructors";
+import ReviewsSection from "../components/course-details/ReviewsSection";
 
 function CourseDetailsPage() {
   const { course_id } = useParams();
@@ -47,9 +48,12 @@ function CourseDetailsPage() {
           <WhatYouLearn />
           <ContentSection sections={course.classified_product.sections} />
         </Stack>
-        {course.classified_product.instructors && (
-          <Instructors instructors={course.classified_product.instructors} />
-        )}
+        <Instructors instructors={course.classified_product.instructors} />
+        <ReviewsSection
+          reviews={course.reviews}
+          finalRating={course.final_rating_from_reviews}
+          numberOfReviews={course.reviews_number}
+        />
       </Stack>
     );
   }
