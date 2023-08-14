@@ -9,13 +9,19 @@ import MoreCoursesPage from "./pages/MoreCoursesPage";
 import CourseDetailsPage from "./pages/CourseDetailsPage";
 
 function App() {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const openLoginPage = () => setIsLoginOpen(true);
+  const closeLoginPage = () => setIsLoginOpen(false);
+
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
         <Box>
+          <Header openLogin={openLoginPage} />
           <HomePage />
           <Footer />
+          <LoginPage isOpen={isLoginOpen} closeLogin={closeLoginPage} />
         </Box>
       ),
     },
@@ -23,8 +29,10 @@ function App() {
       path: "more-courses",
       element: (
         <Box>
+          <Header openLogin={openLoginPage} />
           <MoreCoursesPage />
           <Footer />
+          <LoginPage isOpen={isLoginOpen} closeLogin={closeLoginPage} />
         </Box>
       ),
     },
@@ -32,21 +40,18 @@ function App() {
       path: "course-details/:course_id",
       element: (
         <Box>
+          <Header openLogin={openLoginPage} />
           <CourseDetailsPage />
           <Footer />
+          <LoginPage isOpen={isLoginOpen} closeLogin={closeLoginPage} />
         </Box>
       ),
     },
   ]);
 
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const openLoginPage = () => setIsLoginOpen(true);
-  const closeLoginPage = () => setIsLoginOpen(false);
   return (
     <Container maxWidth="xl" disableGutters>
-      <Header openLogin={openLoginPage} />
       <RouterProvider router={router} />
-      <LoginPage isOpen={isLoginOpen} closeLogin={closeLoginPage} />
     </Container>
   );
 }

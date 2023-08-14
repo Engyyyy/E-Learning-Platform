@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button, Stack, IconButton } from "@mui/material";
 import { useSelector } from "react-redux";
 import logo from "../../assets/logo.svg";
@@ -48,7 +49,9 @@ function Header({ openLogin }) {
       sx={{ backgroundColor: "white" }}
       padding="20px 80px 20px 80px"
     >
-      <img src={logo} alt="logo" />
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
       <SearchBar placeholder="What you want to learn?" />
       <Stack
         direction="row"
