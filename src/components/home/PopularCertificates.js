@@ -93,7 +93,6 @@ function PopularCertificates() {
         media={media}
         content={content}
         actions={actions}
-        cardHeight="400px"
         backgroundColor="white"
       />
     );

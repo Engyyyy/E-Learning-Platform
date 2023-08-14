@@ -23,7 +23,7 @@ function ReviewComments({ reviews }) {
         const reviewMonth = months[parseInt(review.date.slice(3, 5)) - 1];
         const reviewYear = review.date.slice(6);
         return (
-          <Stack>
+          <Stack key={review.product_review_id}>
             <Rating value={review.rating} precision={0.1} readOnly />
             <Stack
               direction="row"

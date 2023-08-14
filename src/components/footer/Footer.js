@@ -2,12 +2,14 @@ import { Box, Stack, Typography, Container } from "@mui/material";
 import FooterLink from "./FooterLink";
 import logo from "../../assets/logo.svg";
 import FacebookIcon from "../../assets/footer/facebook-icon.svg";
+import { useLocation } from "react-router-dom";
 import LinkedinIcon from "../../assets/footer/linkedin-icon.svg";
 import TwitterIcon from "../../assets/footer/twitter-icon.svg";
 import WhatsappIcon from "../../assets/footer/whatsapp-icon.svg";
 import YoutubeIcon from "../../assets/footer/youtube-icon.svg";
 
 function Footer() {
+  let location = useLocation();
   let icons = [
     FacebookIcon,
     LinkedinIcon,
@@ -29,7 +31,10 @@ function Footer() {
   ));
   let renderedLinks = sitePages.map((link, index) => {
     return (
-      <FooterLink selected={link === "Home"} key={index}>
+      <FooterLink
+        selected={link === "Home" && location.pathname === "/"}
+        key={index}
+      >
         {link}
       </FooterLink>
     );

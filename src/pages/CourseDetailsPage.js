@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
 import { useGetCourseDetailsQuery } from "../store";
-import { CircularProgress, Stack, Tabs, Tab } from "@mui/material";
+import { Stack, Tabs, Tab, LinearProgress } from "@mui/material";
 import CourseBanner from "../components/course-details/CourseBanner";
 import AboutCourse from "../components/course-details/AboutCourse";
 import Requirements from "../components/course-details/Requirements";
@@ -15,7 +14,6 @@ function CourseDetailsPage() {
   const { course_id } = useParams();
   const courseDetailsResult = useGetCourseDetailsQuery(course_id);
   let course = courseDetailsResult.data?.data;
-  useEffect(() => console.log(courseDetailsResult));
   let tabs = [
     "Overview",
     "Content",
@@ -26,7 +24,7 @@ function CourseDetailsPage() {
   ];
   let content;
   if (courseDetailsResult.isLoading) {
-    content = <CircularProgress color="primary" />;
+    content = <LinearProgress color="primary" />;
   } else {
     content = (
       <Stack spacing="25px" marginBottom="25px">

@@ -1,4 +1,3 @@
-import { useTheme } from "@emotion/react";
 import { Box } from "@mui/material";
 import { useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -10,20 +9,33 @@ import MoreCoursesPage from "./pages/MoreCoursesPage";
 import CourseDetailsPage from "./pages/CourseDetailsPage";
 
 function App() {
-  console.log(useTheme());
-
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <HomePage />,
+      element: (
+        <Box>
+          <HomePage />
+          <Footer />
+        </Box>
+      ),
     },
     {
       path: "more-courses/:subject_id/:subject_name",
-      element: <MoreCoursesPage />,
+      element: (
+        <Box>
+          <MoreCoursesPage />
+          <Footer />
+        </Box>
+      ),
     },
     {
       path: "course-details/:course_id",
-      element: <CourseDetailsPage />,
+      element: (
+        <Box>
+          <CourseDetailsPage />
+          <Footer />
+        </Box>
+      ),
     },
   ]);
 
@@ -34,7 +46,6 @@ function App() {
     <Box>
       <Header openLogin={openLoginPage} />
       <RouterProvider router={router} />
-      <Footer />
       <LoginPage isOpen={isLoginOpen} closeLogin={closeLoginPage} />
     </Box>
   );

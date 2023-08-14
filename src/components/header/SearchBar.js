@@ -25,7 +25,7 @@ function SearchBar({ placeholder }) {
       inputValue={dispValue}
       onInputChange={handleDispValue}
       freeSolo
-      options={["a", "b", "c", "d"]}
+      options={[]}
       renderInput={(params) => {
         return (
           <Stack direction="row" width="550px">

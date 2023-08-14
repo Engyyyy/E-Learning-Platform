@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { IconButton, Stack } from "@mui/material";
+import { useState } from "react";
+import { CircularProgress, IconButton, Stack } from "@mui/material";
 import { useGetCoursesQuery } from "../../store";
 import CourseCard from "./CourseCard";
 import SliderLeft from "../../assets/home/slider-left-icon.svg";
@@ -37,8 +37,6 @@ function AllCourses({ backgroundColor, buttonVariant }) {
         );
       });
 
-  useEffect(() => console.log(allCourses));
-
   const handleSlideLeft = () => {
     setStartIndex(startIndex - numberOfShownCourses);
   };
@@ -62,9 +60,13 @@ function AllCourses({ backgroundColor, buttonVariant }) {
       >
         <img src={SliderLeft} alt="left-slider" />
       </IconButton>
-      <Stack direction="row" justifyContent="center" spacing="45px">
-        {renderedCourses}
-      </Stack>
+      {result.isLoading ? (
+        <CircularProgress color="primary" />
+      ) : (
+        <Stack direction="row" justifyContent="center" spacing="45px">
+          {renderedCourses}
+        </Stack>
+      )}
       <IconButton
         sx={{ height: "40px", width: "40px" }}
         onClick={handleSlideRight}

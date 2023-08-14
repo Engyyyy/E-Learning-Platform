@@ -2,27 +2,28 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 
-function CustomCard({ media, content, actions, cardHeight, backgroundColor }) {
+function CustomCard({ media, content, actions, backgroundColor }) {
   return (
-    <Card
-      style={{
+    <Stack
+      sx={{
         width: "272px",
-        height: cardHeight,
         borderRadius: "15px",
         boxShadow: "1px 2px 15px rgba(0, 0, 0, 0.16)",
-        position: "relative",
         backgroundColor: backgroundColor,
       }}
     >
       {media && <CardMedia>{media}</CardMedia>}
-      <Box sx={{ padding: "0px 5px 5px 5px" }}>
-        <CardContent>{content}</CardContent>
+      <Stack
+        sx={{
+          flexGrow: 1,
+          padding: "0px 5px 5px 5px",
+        }}
+      >
+        <CardContent sx={{ flexGrow: 1 }}>{content}</CardContent>
         <CardActions
           sx={{
-            position: "absolute",
-            bottom: "10px",
             left: "10px",
             width: "92%",
             textAlign: "center",
@@ -30,8 +31,8 @@ function CustomCard({ media, content, actions, cardHeight, backgroundColor }) {
         >
           {actions}
         </CardActions>
-      </Box>
-    </Card>
+      </Stack>
+    </Stack>
   );
 }
 

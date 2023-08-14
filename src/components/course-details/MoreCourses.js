@@ -3,8 +3,15 @@ import AllCourses from "../home/AllCourses";
 
 function MoreCourses() {
   return (
-    <Stack spacing="25px" padding="20px 75px" sx={{ backgroundColor: "white" }}>
-      <Typography variant="h3">More Courses</Typography>
+    <Stack
+      paddingTop="30px"
+      paddingBottom="30px"
+      spacing="25px"
+      sx={{ backgroundColor: "white" }}
+    >
+      <Typography paddingLeft="75px" variant="h3">
+        More Courses
+      </Typography>
       <AllCourses backgroundColor="#F3F3F3" buttonVariant="contained" />
     </Stack>
   );
