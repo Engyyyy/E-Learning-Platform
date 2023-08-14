@@ -41,11 +41,7 @@ function CourseBanner({ course }) {
       direction="row"
       justifyContent="space-between"
     >
-      <Stack
-        sx={{
-          padding: "30px 40px",
-        }}
-      >
+      <Stack padding="30px 80px">
         <Stack spacing="15px">
           <Typography color="white" component="span" variant="h2">
             {course.classified_product.title}

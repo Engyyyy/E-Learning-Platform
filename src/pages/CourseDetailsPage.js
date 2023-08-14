@@ -31,7 +31,11 @@ function CourseDetailsPage() {
         <Stack>
           <CourseBanner course={course} />
           <Tabs
-            sx={{ backgroundColor: "white", paddingLeft: "40px" }}
+            sx={{
+              backgroundColor: "white",
+              paddingLeft: "80px",
+              paddingRight: "80px",
+            }}
             value={0}
           >
             {tabs.map((tab) => {
@@ -41,7 +45,7 @@ function CourseDetailsPage() {
             })}
           </Tabs>
         </Stack>
-        <Stack paddingLeft="50px" spacing="25px">
+        <Stack paddingLeft="80px" paddingRight="80px" spacing="25px">
           <AboutCourse />
           <Requirements />
           <WhatYouLearn />

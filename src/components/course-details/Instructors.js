@@ -67,7 +67,7 @@ function Instructors({ instructors }) {
   });
   return (
     <Stack
-      padding="20px 75px"
+      padding="20px 80px"
       sx={{ backgroundColor: "#F8F8F8" }}
       spacing="30px"
     >

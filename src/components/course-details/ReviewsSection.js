@@ -4,7 +4,7 @@ import ReviewComments from "./ReviewComments";
 
 function ReviewsSection({ reviews, finalRating, numberOfReviews }) {
   return (
-    <Stack padding="20px 75px">
+    <Stack padding="20px 80px">
       <Typography variant="h3" color="#343434">
         Reviews
       </Typography>

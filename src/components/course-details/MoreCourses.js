@@ -9,7 +9,7 @@ function MoreCourses() {
       spacing="25px"
       sx={{ backgroundColor: "white" }}
     >
-      <Typography paddingLeft="75px" variant="h3">
+      <Typography paddingLeft="80px" paddingRight="80px" variant="h3">
         More Courses
       </Typography>
       <AllCourses backgroundColor="#F3F3F3" buttonVariant="contained" />
