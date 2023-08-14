@@ -17,8 +17,7 @@ function BenefitsOfLearning() {
       justifyContent="center"
       alignItems="center"
       spacing="100px"
-      paddingTop="50px"
-      paddingBottom="50px"
+      padding="50px 80px"
     >
       <img
         src={LearingPhoto}

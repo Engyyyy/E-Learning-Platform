@@ -3,7 +3,7 @@ import { Stack, Typography, Box } from "@mui/material";
 function HomeSection({ title, subtitle, content }) {
   return (
     <Stack spacing="30px">
-      <Stack spacing="15px" alignItems="center">
+      <Stack padding="0px 80px" spacing="15px" alignItems="center">
         <Typography variant="h2" color="secondary">
           {title}
         </Typography>
@@ -11,9 +11,7 @@ function HomeSection({ title, subtitle, content }) {
           {subtitle}
         </Typography>
       </Stack>
-      <Box marginLeft="80px" marginRight="80px">
-        {content}
-      </Box>
+      <Box>{content}</Box>
     </Stack>
   );
 }

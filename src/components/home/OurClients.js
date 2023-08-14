@@ -51,7 +51,7 @@ function OurClients() {
     <Stack
       spacing="30px"
       style={{ backgroundColor: "white" }}
-      padding="50px 0px 50px 0px"
+      padding="50px 80px 50px 80px"
       display="inline-block"
     >
       <Box position="relative">

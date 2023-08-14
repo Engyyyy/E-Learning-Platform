@@ -7,9 +7,9 @@ function Banner() {
       direction="row"
       alignItems="center"
       justifyContent="space-between"
-      style={{ backgroundColor: "white" }}
+      sx={{ backgroundColor: "white" }}
     >
-      <Stack marginLeft="50px" spacing="30px">
+      <Stack spacing="30px" paddingLeft="80px">
         <Box>
           <Typography component="span" variant="h1" color="primary">
             Take The Next Step{" "}

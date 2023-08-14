@@ -50,8 +50,7 @@ function AllCourses({ backgroundColor, buttonVariant }) {
       direction="row"
       justifyContent="space-between"
       alignItems="center"
-      paddingLeft="80px"
-      paddingRight="80px"
+      padding="0px 80px"
     >
       <IconButton
         sx={{ height: "40px", width: "40px" }}

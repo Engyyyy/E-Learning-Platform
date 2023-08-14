@@ -23,8 +23,7 @@ function LearningProcess() {
       direction="row"
       style={{ backgroundColor: "white" }}
       spacing="150px"
-      paddingTop="35px"
-      paddingBottom="35px"
+      padding="35px 80px"
     >
       {learningSteps.map((step) => {
         return (

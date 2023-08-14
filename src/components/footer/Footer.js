@@ -49,13 +49,12 @@ function Footer() {
   ));
 
   return (
-    <Stack width="100%" bottom={0}>
+    <Stack>
       <Stack
-        width="100%"
+        justifyContent="start"
         direction="row"
         spacing="175px"
-        flexWrap="wrap"
-        padding="40px"
+        padding="40px 80px"
         sx={{ backgroundColor: "white" }}
       >
         <Box>
@@ -104,7 +103,7 @@ function Footer() {
           {renderedSupport}
         </Stack>
       </Stack>
-      <Container color="#cfcfc2" width="100%" sx={{ padding: "25px 25px" }}>
+      <Container color="#cfcfc2" sx={{ padding: "25px 80px" }}>
         <Typography textAlign="center" fontWeight={600} fontSize="14px">
           Designed and developed at inova LLC
         </Typography>

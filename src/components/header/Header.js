@@ -46,22 +46,15 @@ function Header({ openLogin }) {
       alignItems="center"
       width="100%"
       sx={{ backgroundColor: "white" }}
-      padding="20px 7px 20px 7px"
+      padding="20px 80px 20px 80px"
     >
-      <img
-        src={logo}
-        alt="logo"
-        style={{ marginLeft: "65px", marginRight: "185px" }}
-      />
+      <img src={logo} alt="logo" />
       <SearchBar placeholder="What you want to learn?" />
       <Stack
         direction="row"
         spacing="15px"
-        sx={{ flexGrow: 1 }}
         justifyContent="end"
         alignItems="center"
-        marginLeft="40px"
-        marginRight="75px"
       >
         {isLoggedIn ? loggedInHeader : loggedOutHeader}
       </Stack>

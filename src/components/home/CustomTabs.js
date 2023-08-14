@@ -40,7 +40,7 @@ function CustomTabs({ value, onChange, tabs, tabWidth }) {
         scrollButtons
         TabIndicatorProps={{ style: { display: "none" } }}
         value={value}
-        onChange={handleSelect}
+        onChange={onChange && handleSelect}
       >
         {tabs.map((tab, index) => {
           return (

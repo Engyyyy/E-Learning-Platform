@@ -57,7 +57,7 @@ function TopCategories() {
     </>
   );
   let content = (
-    <Stack marginLeft="80px" marginRight="80px" spacing="50px">
+    <Stack spacing="50px" padding="0px 80px">
       <Stack spacing="35px">
         <Dropdowns />
         {subjectsResult.data && (
@@ -68,7 +68,12 @@ function TopCategories() {
             tabWidth="100px"
           />
         )}
-        <Stack direction="row" spacing="30px">
+        <Stack
+          direction="row"
+          spacing="30px"
+          justifyContent="center"
+          alignItems="stretch"
+        >
           {topCategoryCourses}
         </Stack>
       </Stack>

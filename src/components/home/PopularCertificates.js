@@ -99,12 +99,7 @@ function PopularCertificates() {
   });
 
   let content = (
-    <Stack
-      paddingLeft="80px"
-      paddingRight="80px"
-      spacing="80px"
-      marginBottom="100px"
-    >
+    <Stack padding="0px 80px" spacing="80px" marginBottom="100px">
       <Stack spacing="50px">
         <CustomTabs value={1} tabs={certificates} tabWidth="281px" />
         <Stack

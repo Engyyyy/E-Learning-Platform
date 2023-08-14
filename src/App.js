@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Header from "./components/header/Header";
@@ -43,11 +43,11 @@ function App() {
   const openLoginPage = () => setIsLoginOpen(true);
   const closeLoginPage = () => setIsLoginOpen(false);
   return (
-    <Box>
+    <Container maxWidth="xl" disableGutters>
       <Header openLogin={openLoginPage} />
       <RouterProvider router={router} />
       <LoginPage isOpen={isLoginOpen} closeLogin={closeLoginPage} />
-    </Box>
+    </Container>
   );
 }
 
