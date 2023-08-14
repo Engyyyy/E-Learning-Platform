@@ -88,7 +88,7 @@ function CourseBanner({ course }) {
       <>
         {course.classified_product.image_url && (
           <img
-            style={{ width: "600px", height: "380px" }}
+            style={{ width: "25%" }}
             src={course.classified_product.image_url}
             alt="course"
           />
