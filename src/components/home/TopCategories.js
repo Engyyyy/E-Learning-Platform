@@ -78,7 +78,7 @@ function TopCategories() {
         </Stack>
       </Stack>
       <Stack alignItems="center">
-        <Link to={`more-courses/${selected.id}/${selected.name}`}>
+        <Link to={`/more-courses`}>
           <Button
             variant="contained"
             sx={{

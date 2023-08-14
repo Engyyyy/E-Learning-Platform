@@ -20,7 +20,7 @@ function App() {
       ),
     },
     {
-      path: "more-courses/:subject_id/:subject_name",
+      path: "more-courses",
       element: (
         <Box>
           <MoreCoursesPage />

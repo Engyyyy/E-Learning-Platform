@@ -1,4 +1,4 @@
-import { Button, Stack, Typography, Box, Grid } from "@mui/material";
+import { Button, Stack, Typography, Box } from "@mui/material";
 import { useState } from "react";
 import AppleLogo from "../../assets/home/apple.svg";
 import IntelLogo from "../../assets/home/intel.svg";
