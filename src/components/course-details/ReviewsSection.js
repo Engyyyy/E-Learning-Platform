@@ -14,12 +14,14 @@ function ReviewsSection({ reviews, finalRating, numberOfReviews }) {
           finalRating={finalRating}
           numberOfReviews={numberOfReviews}
         />
-        <Stack flexGrow={1} spacing="60px">
-          <ReviewComments reviews={reviews} />
-          <Button sx={{ width: "350px" }} variant="outlined">
-            View All Reviews
-          </Button>
-        </Stack>
+        {reviews.length > 0 && (
+          <Stack flexGrow={1} spacing="60px">
+            <ReviewComments reviews={reviews} />
+            <Button sx={{ width: "350px" }} variant="outlined">
+              View All Reviews
+            </Button>
+          </Stack>
+        )}
       </Stack>
     </Stack>
   );

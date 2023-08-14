@@ -41,7 +41,11 @@ function RatingDetails({ reviews, finalRating, numberOfReviews }) {
                 {5 - index} stars
               </Typography>
               <LinearProgress
-                value={(starRating / numberOfReviews) * 100}
+                value={
+                  numberOfReviews === 0
+                    ? 0
+                    : (starRating / numberOfReviews) * 100
+                }
                 color="secondary"
                 variant="determinate"
                 sx={{
@@ -51,7 +55,10 @@ function RatingDetails({ reviews, finalRating, numberOfReviews }) {
                 }}
               />
               <Typography fontSize="16px" fontWeight={500}>
-                {(starRating / numberOfReviews) * 100}%
+                {numberOfReviews === 0
+                  ? 0
+                  : (starRating / numberOfReviews) * 100}
+                %
               </Typography>
             </Stack>
           );
