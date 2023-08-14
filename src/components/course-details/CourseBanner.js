@@ -85,7 +85,15 @@ function CourseBanner({ course }) {
           {renederedInstructors}
         </Stack>
       </Stack>
-      <img src={course.classified_product.image_url} alt="course" />
+      <>
+        {course.classified_product.image_url && (
+          <img
+            style={{ width: "600px", height: "380px" }}
+            src={course.classified_product.image_url}
+            alt="course"
+          />
+        )}
+      </>
     </Stack>
   );
 }
