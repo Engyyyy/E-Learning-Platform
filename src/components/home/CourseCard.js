@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Typography, Button, Box, Stack } from "@mui/material";
 import CustomCard from "./CustomCard";
 import Review from "./Review";
+import WhiteShoppingCart from "../../assets/home/white-shopping-cart.svg";
+import PrimaryShoppingCart from "../../assets/header/shopping-cart-icon.svg";
 
 function CourseCard({
   id,
@@ -13,6 +15,8 @@ function CourseCard({
   currency,
   rate,
   reviewsNumber,
+  backgroundColor,
+  buttonVariant,
 }) {
   let media = imageUrl && (
     <img height="170px" width="272px" src={imageUrl} alt="course-media" />
@@ -125,9 +129,28 @@ function CourseCard({
     </Stack>
   );
   let actions = (
-    <Button sx={{ width: 1 }} variant="outlined">
-      Enroll now!
-    </Button>
+    <Stack direction="row" width="100%" spacing="17px">
+      <Button
+        sx={{ flexGrow: 1, borderRadius: "8px", height: "34px" }}
+        variant={buttonVariant}
+      >
+        Enroll now!
+      </Button>
+      <Button
+        sx={{ borderRadius: "8px", height: "34px" }}
+        width="25%"
+        variant={buttonVariant}
+      >
+        <img
+          src={
+            buttonVariant === "outlined"
+              ? PrimaryShoppingCart
+              : WhiteShoppingCart
+          }
+          alt="shopping-cart-icon"
+        />
+      </Button>
+    </Stack>
   );
 
   return (
@@ -136,6 +159,7 @@ function CourseCard({
       content={content}
       actions={actions}
       cardHeight="460px"
+      backgroundColor={backgroundColor}
     />
   );
 }

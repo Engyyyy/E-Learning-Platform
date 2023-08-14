@@ -9,6 +9,7 @@ import WhatYouLearn from "../components/course-details/WhatYouLearn";
 import ContentSection from "../components/course-details/ContentSection";
 import Instructors from "../components/course-details/Instructors";
 import ReviewsSection from "../components/course-details/ReviewsSection";
+import MoreCourses from "../components/course-details/MoreCourses";
 
 function CourseDetailsPage() {
   const { course_id } = useParams();
@@ -54,6 +55,7 @@ function CourseDetailsPage() {
           finalRating={course.final_rating_from_reviews}
           numberOfReviews={course.reviews_number}
         />
+        <MoreCourses />
       </Stack>
     );
   }

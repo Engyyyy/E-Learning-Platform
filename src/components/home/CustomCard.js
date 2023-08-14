@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import { Box } from "@mui/material";
 
-function CustomCard({ media, content, actions, cardHeight }) {
+function CustomCard({ media, content, actions, cardHeight, backgroundColor }) {
   return (
     <Card
       style={{
@@ -13,6 +13,7 @@ function CustomCard({ media, content, actions, cardHeight }) {
         borderRadius: "15px",
         boxShadow: "1px 2px 15px rgba(0, 0, 0, 0.16)",
         position: "relative",
+        backgroundColor: backgroundColor,
       }}
     >
       {media && <CardMedia>{media}</CardMedia>}

@@ -44,6 +44,8 @@ function TopCategories() {
           currency={course.original_price_currency}
           rate={course.final_rating_from_reviews}
           reviewsNumber={course.reviews_number}
+          backgroundColor="white"
+          buttonVariant="outlined"
         />
       );
     });
